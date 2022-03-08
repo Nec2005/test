@@ -129,6 +129,7 @@
                             <failOnNoGitDirectory>false</failOnNoGitDirectory>
                         </configuration>
                     </plugin>
+
                     <plugin>
                         <groupId>org.jacoco</groupId>
                         <artifactId>jacoco-maven-plugin</artifactId>
@@ -149,7 +150,10 @@
                             </execution>
                         </executions>
                     </plugin>
+                    
                 </plugins>
+
+
             </build>
 
         </profile>
