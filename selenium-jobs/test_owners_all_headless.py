@@ -7,27 +7,26 @@ import os
 
 # Set chrome options for working with headless mode (no screen)
 chrome_options = webdriver.ChromeOptions()
-#chrome_options.add_argument("headless")
-#chrome_options.add_argument("no-sandbox")
-#chrome_options.add_argument("disable-dev-shm-usage")
+chrome_options.add_argument("headless")
+chrome_options.add_argument("no-sandbox")
+chrome_options.add_argument("disable-dev-shm-usage")
 
 # Update webdriver instance of chrome-driver with adding chrome options
-driver = webdriver.Chrome("C:\chromedriver.exe", options=chrome_options)
-driver.implicitly_wait(100)
+driver = webdriver.Chrome(options=chrome_options)
 # driver = webdriver.Chrome("/Users/home/Desktop/chromedriver")
 # Connect to the application
-# APP_IP = os.environ['MASTER_PUBLIC_IP']
-url = "http://44.197.228.66:8080/"
+APP_IP = os.environ['MASTER_PUBLIC_IP']
+url = "http://"+APP_IP.strip()+":8080/"
 # url = "http://localhost:8080"
 print(url)
 driver.get(url)
-sleep(5)
+sleep(3)
 owners_link = driver.find_element_by_link_text("OWNERS")
 owners_link.click()
-sleep(4)
+sleep(2)
 all_link = driver.find_element_by_link_text("ALL")
 all_link.click()
-sleep(4)
+sleep(2)
 
 # Verify that table loaded
 sleep(1)
