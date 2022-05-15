@@ -1,6 +1,6 @@
 nodes:
-  - address: 18.209.226.228
-    internal_address: 172.31.5.167
+  - address: 44.200.199.144
+    internal_address: 172.31.9.163
     user: ubuntu
     role:
       - controlplane
@@ -15,7 +15,7 @@ services:
     creation: 6h
     retention: 24h
 
-ssh_key_path: ~/.ssh/nec-rancher.pem
+ssh_key_path: ~/.ssh/nec1-rancher.pem
 
 # Required for external TLS termination with
 # ingress-nginx v0.22+
