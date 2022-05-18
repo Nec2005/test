@@ -8,9 +8,9 @@ pipeline {
         AWS_REGION="us-east-1"
         ECR_REGISTRY="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
         RANCHER_URL="https://rancher.mycloudworld.co.uk"
-        RANCHER_CONTEXT="c-nm4kb:p-87lpk"
+        RANCHER_CONTEXT="c-qmfd9:p-fxqjx"
        //First part of projectID
-        CLUSTERID="c-nm4kb"
+        CLUSTERID="c-qmfd9"
         RANCHER_CREDS=credentials('rancher-petclinic-credentials')
     }
     stages {
